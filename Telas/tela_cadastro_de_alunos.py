@@ -6,7 +6,7 @@ def verificacao_Numerica(registro_Academico):
 
 root_CadAlu = tk.Tk()
 root_CadAlu.title = "CADASTRO DE ALUNOS"
-root_CadAlu.geometry("400x319")
+root_CadAlu.geometry("400x250")
 root_CadAlu.resizable(False,False)
 
 frame_Cadastro = tk.Frame(root_CadAlu)
