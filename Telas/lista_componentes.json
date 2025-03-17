@@ -1,0 +1,5 @@
+{
+    "Resistor": ["Resistência", "Potência"],
+    "Capacitor": ["Tipo", "Capacitância", "Tensão"]
+  }
+  
