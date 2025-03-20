@@ -43,5 +43,3 @@ Certifique-se de ter o Python instalado.
 Este projeto está sob a licença MIT.
 
 ---
-
-Caso precise de mais ajustes, me avise! 🚀
