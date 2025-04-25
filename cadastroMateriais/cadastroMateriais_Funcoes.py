@@ -1,3 +1,5 @@
+# More Tests
+
 import os
 import json
 import tkinter as tk
@@ -21,11 +23,13 @@ def atualizar_Label(variavel_ItemComboBox, json_LabelsComponentes, lista_Frames,
 
     categoria = variavel_ItemComboBox.get()
 
-    try:
+    dados_salvos = {}
+    if os.path.exists(caminho_valores):
         with open(caminho_valores, "r", encoding = "utf-8") as f:
-            dados_salvos = json.load(f)
-    except FileNotFoundError:
-        dados_salvos = {}
+            try:
+                dados_salvos = json.load(f)
+            except json.JSONDecodeError:
+                dados_salvos = {}
 
     preenchido = dados_salvos.get(categoria, {})
 
@@ -95,11 +99,13 @@ def salvar_preenchimento(variavel_ItemComboBox, lista_Frames):
         preenchido[label_texto] = entry.get().strip()
 
     if categoria and preenchido:
-        try:
+        dados = {}
+        if os.path.exists(caminho_valores):
             with open(caminho_valores, "r", encoding = "utf-8") as f:
-                dados = json.load(f)
-        except FileNotFoundError:
-            dados = {}
+                try:
+                    dados = json.load(f)
+                except json.JSONDecodeError:
+                    dados = {}
 
         dados[categoria] = preenchido
 
