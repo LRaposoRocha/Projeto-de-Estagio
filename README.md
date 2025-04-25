@@ -1,45 +1,99 @@
-Aqui está um README mais completo, sem a seção de melhorias futuras:  
+# 🏫 Sistema de Gerenciamento de Empréstimos de Materiais
+
+## 🧠 Descrição
+
+Este projeto foi desenvolvido para **automatizar o controle de empréstimos de materiais** em ambientes acadêmicos, eliminando o uso de fichas físicas.  
+A aplicação é dividida em três módulos principais:
+
+- Cadastro de Alunos
+- Cadastro de Materiais
+- Controle de Empréstimos Ativos
+
+Toda a interface é construída com **Tkinter** e os dados são armazenados em **JSON**.
 
 ---
 
-# 📌 Projeto de Empréstimo de Materiais - Universidade Santa Cecília  
+## 📋 Funcionalidades
 
-Projeto desenvolvido para substituir o uso das fichas de autorização do laboratório M513, automatizando o empréstimo de materiais.  
+- ✔️ Cadastro de novos alunos com verificação de RA
+- ✔️ Cadastro de novos materiais e categorias personalizadas
+- ✔️ Registro de novos empréstimos com data e hora automáticos
+- ✔️ Busca automática de aluno pelo RA durante o empréstimo
+- ✔️ Finalização de empréstimos diretamente pela interface
+- ✔️ Interface amigável e intuitiva
 
-## 📋 Funcionalidades  
-✔️ Cadastro de materiais do laboratório  
-✔️ Controle de empréstimos e devoluções  
-✔️ Registro de alunos e cursos  
-✔️ Interface gráfica intuitiva com Tkinter  
-✔️ Validação de entrada para evitar erros  
+---
 
-## 🚀 Tecnologias Utilizadas  
-- **Python** – Linguagem principal do projeto  
-- **Tkinter** – Interface gráfica para facilitar o uso  
-- **JSON** – Armazenamento de dados temporário  
+## 🚀 Tecnologias Utilizadas
 
-## 🛠️ Instalação e Execução  
+- **Python 3.11**
+- **Tkinter** (para a interface gráfica)
+- **JSON** (armazenamento de dados)
+- **OS** (gerenciamento de arquivos)
+- **Datetime** (registro de data e hora)
 
-### 🔹 Pré-requisitos  
-Certifique-se de ter o Python instalado.  
+---
 
-### 🔹 Passo a passo  
+## 🛠️ Instalação e Execução
 
-1. **Clone o repositório:**  
+### 🔹 Pré-requisitos
+
+- Python instalado (versão 3.11 ou superior)
+
+### 🔹 Passo a passo
+
+1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
    ```
-2. **Instale as dependências (se houver):**  
+
+2. (Opcional) Instale dependências:
    ```bash
    pip install -r requirements.txt
    ```
-3. **Execute o programa:**  
+
+3. Execute o módulo desejado:
    ```bash
-   python nome_do_arquivo.py
+   python cadastroAlunos/cadastroAlunos_Tela.py
    ```
-   
-## 📄 Licença  
-Este projeto está sob a licença MIT.
+   ou
+   ```bash
+   python cadastroMateriais/cadastroMateriais_Tela.py
+   ```
+   ou
+   ```bash
+   python emprestimosAtivos/emprestimosAtivos_Tela.py
+   ```
 
 ---
+
+## 📂 Estrutura do Projeto
+
+```
+Projeto/
+│
+├── cadastroAlunos/
+│   ├── cadastroAlunos_Tela.py
+│   ├── cadastroAlunos_Funcoes.py
+│   └── cadastroAlunos_Dados.json
+│
+├── cadastroMateriais/
+│   ├── cadastroMateriais_Tela.py
+│   ├── cadastroMateriais_Funcoes.py
+│   ├── categoriasDados.json
+│   └── valorDados.json
+│
+├── emprestimosAtivos/
+│   ├── emprestimosAtivos_Tela.py
+│   ├── emprestimosAtivos_Funcoes.py
+│   └── emprestimosAtivos_Dados.json
+│
+└── README.md
+```
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT.
